@@ -1,0 +1,24 @@
+<center>
+<h1>Services</h1>
+  <p>Vous avez {{model.countActive}} articles séléctioné(s)</p>
+  {{#each model.services as |service|}}
+      {{#if service.active}}
+
+      <button {{action "toggleService" model.services}} class="btn btn-success">
+
+        {{service.name}} ${{service.price}}
+    </button><br>
+
+      {{else}}
+    <button class="btn btn-dark" {{action "toggleService" model.services}}>
+
+      {{service.name}} ${{service.price}}
+    </button><br>
+
+      {{/if}}
+{{/each}}
+
+<p>Total: {{model.sumActive}}</p>
+</center>
+
+{{outlet}}
