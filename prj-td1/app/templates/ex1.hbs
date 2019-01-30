@@ -1,0 +1,14 @@
+<h2>Exercice 1 : Note</h2>
+{{textarea value=model.content cols=50 rows=8 maxlength=model.MAX}}
+<p>MAX : {{model.MAX}}</p>
+<div class="alert {{model.style}}">
+<p>Nombre de caractères restants : {{model.size}}</p>
+</div>
+{{#if model.info}}
+<div class="alert alert-info">
+  <p>{{model.info}}</p>
+</div>
+{{/if}}
+<button {{action "save" model}}class="btn btn-primary">Enregistrer</button>
+<button {{action "clear" model}}class="btn btn-primary">Effacer</button>
+{{outlet}}
