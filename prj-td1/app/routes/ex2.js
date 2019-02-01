@@ -12,6 +12,10 @@ const Services=EmberObject.extend({
   name: null,
   price: null,
   active : null,
+  codePromo : false,
+  B22:0.05,
+  AZ:0.01,
+  UBOAT:0.02,
 
   sumActive: computed('service.@each.active',function () {
     let sommeActive = 0;
@@ -29,7 +33,7 @@ export default Route.extend({
         {
           "name": "Web Development",
           "price": 300,
-          "active":true
+          "active":true,
         },{
           "name": "Design",
           "price": 400,
