@@ -17,12 +17,28 @@ const Services=EmberObject.extend({
   AZ:0.01,
   UBOAT:0.02,
 
+
   sumActive: computed('service.@each.active',function () {
     let sommeActive = 0;
     this.get('service').forEach(function (element) {
         sommeActive = sommeActive+element.price;
     })
     return sommeActive;
+  }),
+  remise: null,
+
+  prixRemise:computed('sumActive','remise',function () {
+   return this.get('remise') * this.get('sumActive');
+  }),
+
+  prixTotal: computed('sumActive','prixRemise',function () {
+   /* if (this.get('remise') != 0) {
+      return this.get('sumActive') - this.get('sumActive') * this.get('remise');
+    }else{
+      return 0;
+    }*/
+
+   return this.get('sumActive') - this.get('prixRemise');
   })
   }
 );

@@ -22,7 +22,19 @@ export default Controller.extend({
       //console.log(model.get('codePromo'));
     },
 
-    verifCodePromo(){
+    verifCodePromo(value) {
+      let somme = this.model.get('sumActive');
+      if (this.model.codePromo) {
+        if (value == "B2") {
+          this.model.set('remise',0.05);
+        } else if (value == "A") {
+          this.model.set('remise',0.01);
+        } else if (value == "UBOA") {
+          this.model.set('remise', 0.02);
+        }else{
+          this.model.set('remise', 0);
+        }
+      }
     }
   }
 });

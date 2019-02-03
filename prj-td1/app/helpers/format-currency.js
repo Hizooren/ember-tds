@@ -7,7 +7,7 @@ export function formatCurrency(params/*, hash*/) {
 export default Ember.Helper.helper(function(params, namedArgs) {
   let value = params[0],
     euros = Math.floor(value),
-    cents = value % 10,
+    cents = Math.floor((value - euros) *100 % 100),
     sign = namedArgs.sign === undefined ? '$' : namedArgs.sign;
 
   if (cents.toString().length === 1) { cents = '0' + cents; }
