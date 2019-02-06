@@ -23,7 +23,6 @@ export default Controller.extend({
     },
 
     verifCodePromo(value) {
-      let somme = this.model.get('sumActive');
       if (this.model.codePromo) {
         if (value == "B2") {
           this.model.set('remise',0.05);

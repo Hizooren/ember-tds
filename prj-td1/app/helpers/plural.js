@@ -4,7 +4,7 @@ export function plural(params/*, hash*/) {
   return params;
 }
 
-export default Ember.Helper.helper(function(params, namedArgs) {
+export default Ember.Helper.helper(function(params) {
 
   let nbServices = params[0];
   if (nbServices == 0){
