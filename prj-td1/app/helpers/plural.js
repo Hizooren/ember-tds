@@ -1,10 +1,6 @@
 import { helper } from '@ember/component/helper';
 
-export function plural(params/*, hash*/) {
-  return params;
-}
-
-export default Ember.Helper.helper(function(params) {
+export function plural(params) {
 
   let nbServices = params[0];
   if (nbServices == 0){
@@ -18,6 +14,7 @@ export default Ember.Helper.helper(function(params) {
   }else{
       return  `Vous avez ${params[0]} services séléctionnés.`;
   }
-});
+}
 
 
+export default helper(plural);
