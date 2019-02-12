@@ -1,0 +1,16 @@
+{{multi-select elements=model.dispoItems selectedIds=model.dispoItemsIds_}}
+{{multi-select elements=model.includedItems selectedIds=model.includedItemsIds_}}
+
+<ul>
+  {{#each model.dispoItems_ as |elm|}}
+    <li>{{elm.title}}</li>
+  {{/each}}
+</ul>
+
+<input type="button" value=">" {{action "addToIncluded" "model"}}/>
+<input type="button" value=">>" {{action "addAllToIncluded"}}/>
+<input type="button" value="<" {{action "removeFromIncluded"}}/>
+<input type="button" value="<<" {{action "removeAllFromIncluded"}}/>
+
+
+{{outlet}}
