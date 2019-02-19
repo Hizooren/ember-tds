@@ -1,5 +1,42 @@
-{{multi-select dblClick="dblClickAddToIncluded" elements=model.dispoItems selectedIds=model.dispoItemsIds_}}
-{{multi-select dblClick="dblClickRemoveFromIncluded" elements=model.includedItems selectedIds=model.includedItemsIds_}}
+
+<div style="padding: 30px;height: 100%">
+  <h1 style="font-family: 'Century gothic', cursive;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  color: #000000;">Sélectionnez vos produits</h1><br>
+
+  <div class="blocklist">
+    <div class="liste">
+      <h6>Produits disponibles :</h6>
+        {{multi-select dblClick="dblClickAddToIncluded" elements=model.dispoItems selectedIds=model.dispoItemsIds_}}
+    </div>
+    <div class="boutons">
+      <input class="btn btn-primary bouton" type="button" value=">" {{action "addToIncluded" model}}/><br>
+      <input class="btn btn-primary bouton" type="button" value=">>" {{action "addAllToIncluded" model}}/><br>
+      <input class="btn btn-primary bouton" type="button" value="<" {{action "removeFromIncluded" model}}/><br>
+      <input class="btn btn-primary bouton" type="button" value="<<" {{action "removeAllFromIncluded" model}}/>
+    </div>
+    <div class="liste">
+      <h6>Produits sélectionnés :</h6>
+      {{multi-select dblClick="dblClickRemoveFromIncluded" elements=model.includedItems selectedIds=model.includedItemsIds_}}
+    </div>
+  </div>
+  <br>
+  <div style="font-family: 'Century gothic', cursive;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  color: #000000" class="text-center">
+  {{plural model.includedItems.length}}
+  </div>
+
+  <div class="bandeau d-flex justify-content-end align-items-center">
+    <div class="link mr-3">
+      {{#link-to "liste"}}Etape suivante{{/link-to}}
+      <input type="button" class="btn btn-outline-primary" value=">"/>
+    </div>
+  </div>
+
+</div>
+
+
 
 <!--<ul>
   {{#each model.dispoItems_ as |elm|}}
@@ -7,10 +44,7 @@
   {{/each}}
 </ul>-->
 
-<input type="button" value=">" {{action "addToIncluded" model}}/>
-<input type="button" value=">>" {{action "addAllToIncluded" model}}/>
-<input type="button" value="<" {{action "removeFromIncluded" model}}/>
-<input type="button" value="<<" {{action "removeAllFromIncluded" model}}/>
+
 
 
 {{outlet}}

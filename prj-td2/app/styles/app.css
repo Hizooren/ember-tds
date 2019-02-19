@@ -1,0 +1,43 @@
+
+.liste {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 3px 5px;
+  width:500px; /* or whatever width you want. */
+}
+
+.boutons {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px;
+  width:50px; /* or whatever width you want. */
+
+}
+
+
+.blocklist {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.bouton {
+
+  width: 50px;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+
+.bandeau {
+  font-family: 'Century gothic', cursive;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  color: #FFFFFF;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #7fdbff;
+}
+
