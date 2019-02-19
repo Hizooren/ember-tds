@@ -1,16 +1,16 @@
-{{multi-select elements=model.dispoItems selectedIds=model.dispoItemsIds_}}
-{{multi-select elements=model.includedItems selectedIds=model.includedItemsIds_}}
+{{multi-select dblClick="dblClickAddToIncluded" elements=model.dispoItems selectedIds=model.dispoItemsIds_}}
+{{multi-select dblClick="dblClickRemoveFromIncluded" elements=model.includedItems selectedIds=model.includedItemsIds_}}
 
-<ul>
+<!--<ul>
   {{#each model.dispoItems_ as |elm|}}
     <li>{{elm.title}}</li>
   {{/each}}
-</ul>
+</ul>-->
 
-<input type="button" value=">" {{action "addToIncluded" "model"}}/>
-<input type="button" value=">>" {{action "addAllToIncluded"}}/>
-<input type="button" value="<" {{action "removeFromIncluded"}}/>
-<input type="button" value="<<" {{action "removeAllFromIncluded"}}/>
+<input type="button" value=">" {{action "addToIncluded" model}}/>
+<input type="button" value=">>" {{action "addAllToIncluded" model}}/>
+<input type="button" value="<" {{action "removeFromIncluded" model}}/>
+<input type="button" value="<<" {{action "removeAllFromIncluded" model}}/>
 
 
 {{outlet}}

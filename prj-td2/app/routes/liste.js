@@ -75,7 +75,9 @@ export default Route.extend({
           "title": "The Languages and Frameworks You Should Learn in 2017",
           "image": "https://tutorialzine.com/media/2016/12/the-languages-and-frameworks-you-should-learn-in-2017.png"
         }
-      ]
+      ],
+      includedItems : []
+
     });
   }
 
