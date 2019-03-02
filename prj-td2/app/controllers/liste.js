@@ -84,6 +84,15 @@ export default Controller.extend({
           includedItems.removeObject(item);
         }
       })
+    },
+
+    nextStep(model){
+      model.transitionTo('liste.next-step')
+        .then((newRoute) => {
+          newRoute.set('model.includedItems_', model.includedItems_);
+        });
+
+      return true;
     }
 
   }

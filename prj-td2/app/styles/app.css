@@ -33,7 +33,7 @@
   text-shadow: 0 3px 0 rgba(0,0,0,0.1);
   color: #FFFFFF;
   height: 80px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
