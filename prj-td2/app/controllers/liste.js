@@ -87,12 +87,7 @@ export default Controller.extend({
     },
 
     nextStep(model){
-      model.transitionTo('liste.next-step')
-        .then((newRoute) => {
-          newRoute.set('model.includedItems_', model.includedItems_);
-        });
-
-      return true;
+      model.set("step1",!model.get("step1"));
     }
 
   }

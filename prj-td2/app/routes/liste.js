@@ -24,7 +24,8 @@ const Liste=EmberObject.extend({
     return includedItems.filter(item=>ids.includes(get(item,'id')));
     //Retourne les élements de dispoItems correspondant aux ids
 
-  })
+  }),
+  step1:true
 
 });
 

@@ -1,3 +1,5 @@
+{{#if model.step1}}
+
 
 <div style="padding: 30px;height: 100%">
   <h1 style="font-family: 'Century gothic', cursive;
@@ -27,30 +29,40 @@
   {{plural model.includedItems.length}}
   </div>
 
+  <div class="bandeau d-flex justify-content-end align-items-center">
+    <div class="link mr-3">
+      <b>Etape Suivante</b>
+      <input {{action "nextStep" model }} type="button" class="btn btn-outline-primary" value=">" />
+    </div>
+  </div>
 
+</div>
+  {{else}}
+  <div class="container">
 
-<div class="container">
-
-  <h1 style="font-family: 'Century gothic', cursive;
+    <h1 style="font-family: 'Century gothic', cursive;
   text-shadow: 0 3px 0 rgba(0,0,0,0.1);
   color: #000000;">Votre choix</h1><br>
 
-  <ul class="list-group">
-    {{#each model.includedItems as |elem|}}
-      <li class="list-group-item"><img src="{{elem.image}}" style="width: 120px;height: 100px;margin-right: 10px">{{elem.title}}</li>
-    {{/each}}
-  </ul>
+    <ul class="list-group">
+      {{#each model.includedItems as |elem|}}
+        <li class="list-group-item"><img src="{{elem.image}}" style="width: 120px;height: 100px;margin-right: 10px">{{elem.title}}</li>
+      {{/each}}
+    </ul>
 
-</div>
-
-
-
-</div>
-
-<div class="bandeau d-flex justify-content-end align-items-center">
-  <div class="link mr-3">
-    {{#link-to "liste"}}Etape suivante{{/link-to}}
-    <input type="button" class="btn btn-outline-primary" value=">"/>
   </div>
-</div>
+
+
+  <div class="bandeau d-flex justify-content-end align-items-center">
+    <div class="link mr-3">
+      <b>Etape Précédente</b>
+      <input {{action "nextStep" model }} type="button" class="btn btn-outline-primary" value="<"/>
+    </div>
+  </div>
+{{/if}}
+
+
+
+
+
 {{outlet}}
