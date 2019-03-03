@@ -1,4 +1,5 @@
 <h2>Contacts</h2>
+{{input value=model.filtre placeholder="Filtrer..."}}
   <table class="table">
     <thead class="thead-dark">
     <tr>
@@ -9,16 +10,16 @@
     </tr>
     </thead>
     <tbody>
-  {{#each model.datas as |contact|}}
+  {{#each model.contacts as |contact|}}
     <tr>
       <td>{{contact.nom}}</td>
       <td>{{contact.prenom}}</td>
       <td>{{contact.email}}</td>
       <td class="text-right">
-        <button class="btn btn-secondary btn-sm">
+        {{#link-to "contacts.edit" class="btn btn-secondary btn-sm"}}
           {{fa-icon "edit"}}
-        </button>
-        <button  {{action "delete"}} class="btn btn-danger btn-sm">
+        {{/link-to}}
+        <button  {{action "delete" contact}} class="btn btn-danger btn-sm">
           {{fa-icon "remove"}}
         </button>
       </td>
@@ -29,4 +30,13 @@
 {{#link-to "contacts.add" class="btn btn-primary"}}
   Ajouter un contact...
 {{/link-to}}
+{{#if model.deleteds}}
+  {{#if model.filtre}}
+
+  {{else}}
+    <button {{action "cancelDelete" model}} type="button" class="btn btn-danger">
+      Annuler les suppressions({{model.deletedsCount}}).
+    </button>
+  {{/if}}
+{{/if}}
 {{outlet}}

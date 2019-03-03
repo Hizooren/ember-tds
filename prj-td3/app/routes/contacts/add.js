@@ -2,13 +2,20 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model(){
-    return this.store.createRecord('contact',{
-      nom: 'Pas de nom'
-    });
+    return {
+      nom:null,
+      prenom:null,
+      email:null
+    }
   },
   actions: {
     addContact(contact){
-      contact.save().then(
+     let row = this.store.createRecord('contact',{
+        nom: contact.nom,
+        prenom: contact.prenom,
+        email:contact.email
+      });
+      row.save().then(
         ()=>{
           this.transitionTo('contacts');
         }
