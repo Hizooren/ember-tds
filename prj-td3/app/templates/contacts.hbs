@@ -16,8 +16,10 @@
       <td>{{contact.prenom}}</td>
       <td>{{contact.email}}</td>
       <td class="text-right">
-        {{#link-to "contacts.edit" class="btn btn-secondary btn-sm"}}
+        {{#link-to "contacts.edit"}}
+          <button  {{action "editContact" contact}} class="btn btn-secondary btn-sm">
           {{fa-icon "edit"}}
+          </button>
         {{/link-to}}
         <button  {{action "delete" contact}} class="btn btn-danger btn-sm">
           {{fa-icon "remove"}}

@@ -1,1 +1,11 @@
+<form>
+  {{input value=model.editedContact.nom placeholder="Nom"}}
+  {{input value=model.editedContact.prenom placeholder="Prénom"}}
+  {{input value=model.editedContact.email placeholder="Email"}}
+  {{#link-to "contacts"}}
+  <button {{action "edit" model}} class="btn btn-success">
+    Valider
+  </button>
+{{/link-to}}
+</form>
 {{outlet}}

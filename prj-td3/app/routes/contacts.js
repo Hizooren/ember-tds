@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import EmberObject, { computed,get} from '@ember/object';
+import EmberObject, { computed} from '@ember/object';
 
 
 const Contact=EmberObject.extend({
@@ -18,7 +18,8 @@ const Contact=EmberObject.extend({
   deletedsCount: computed("deleteds.@each",function () {
     return this.deleteds.length;
   }),
-  filtre:""
+  filtre:"",
+  editedContact: null
 });
 
 export default Route.extend({
@@ -38,6 +39,9 @@ export default Route.extend({
         model.get('contacts').pushObject(contact);
       });
       model.get('deleteds').clear();
+    },
+    editContact(contact){
+      this.controller.get('model').set('editedContact',contact);
     }
   }
 
