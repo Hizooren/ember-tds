@@ -1,9 +1,18 @@
-<form>
-  {{input value=model.nom placeholder="Nom"}}
-  {{input value=model.prenom placeholder="Prénom"}}
-  {{input value=model.email placeholder="Email"}}
-  <button {{action "addContact" model}} class="btn btn-success">
+<form style="margin-top: 50px">
+  <h3>Ajouter un contact</h3>
+  <hr>
+  <div style="display: inline-flex">
+  {{input value=model.nom placeholder="Nom" class="form-control btnAdd"}}
+  {{input value=model.prenom placeholder="Prénom" class="form-control btnAdd"}}
+  {{input value=model.email placeholder="Email" class="form-control btnAdd" type="email"}}
+  <button {{action "addContact" model}} class="btn btn-success ajoutBtn">
     Valider
   </button>
+{{#link-to "contacts"}}
+    <button  class="btn btn-danger ajoutBtn">
+      Annuler
+    </button>
+  {{/link-to}}
+  </div>
 </form>
 {{outlet}}

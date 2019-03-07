@@ -1,12 +1,12 @@
-<h2>Contacts</h2>
-{{input value=model.filtre placeholder="Filtrer..."}}
+
+{{input value=model.filtre placeholder="Filtrer..." class="barreFiltre form-control"}}
   <table class="table">
     <thead class="thead-dark">
     <tr>
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Email</th>
-      <th scope="col" class="text-right">Actions</th>
+      <th scope="col" class="text-center">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -15,7 +15,7 @@
       <td>{{contact.nom}}</td>
       <td>{{contact.prenom}}</td>
       <td>{{contact.email}}</td>
-      <td class="text-right">
+      <td class="text-center">
         {{#link-to "contacts.edit"}}
           <button  {{action "editContact" contact}} class="btn btn-secondary btn-sm">
           {{fa-icon "edit"}}
@@ -29,16 +29,22 @@
   {{/each}}
     </tbody>
   </table>
-{{#link-to "contacts.add" class="btn btn-primary"}}
+{{#link-to "contacts.add" class="btn btn-primary ajoutBtn"}}
   Ajouter un contact...
 {{/link-to}}
 {{#if model.deleteds}}
   {{#if model.filtre}}
 
   {{else}}
-    <button {{action "cancelDelete" model}} type="button" class="btn btn-danger">
-      Annuler les suppressions({{model.deletedsCount}}).
+    <button {{action "cancelDelete" model}} type="button" class="btn btn-danger ajoutBtn">
+      {{plural model.deletedsCount}}
     </button>
   {{/if}}
 {{/if}}
+<br>
+<br>
+<p class="text-center" style="font-weight: bold">
+  {{plural-contact model.contacts.length}}
+</p>
+
 {{outlet}}
