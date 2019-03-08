@@ -13,7 +13,7 @@ export default Route.extend({
   },
   actions: {
     addContact(contact){
-      if(contact.nom !== null && match(contact.email, /^.+@.+\..+$/)) {
+      if(contact.nom !== null && contact.email.match(/^.+@.+\..+$/)) {
         let row = this.store.createRecord('contact', {
           nom: contact.nom.toUpperCase(),
           prenom: contact.prenom,
