@@ -1,0 +1,20 @@
+
+<form>
+{{input value=model.copy.name placeholder="Name"}}<br>
+  {{textarea value=model.copy.description placeholder="Description"}}<br>
+  {{input value=model.copy.startDate placeholder="startDate"}}<br>
+  {{input value=model.copy.dueDate placeholder="dueDate"}}<br>
+  {{input value=model.copy.owner placeholder="Owner"}}<br>
+
+
+  <button class="ui success button" {{action "save" model}}>
+  {{fa-icon "check"}}
+  Valider
+</button>
+<button class="ui remove button" {{action "cancel" model}} value="Cancel">
+  {{fa-icon "remove"}}
+  Cancel
+</button>
+
+</form>
+{{outlet}}
