@@ -1,6 +1,11 @@
 
 {{input value=model.copy.identity placeholder="Identity"}}
 <button class="ui success button" {{action "save" model}}>
-{{fa-icon "check"}}
+    {{fa-icon "check"}}
+  Valider
+</button>
+<button class="ui remove button" {{action "cancel" model}} value="Cancel">
+  {{fa-icon "remove"}}
+  Cancel
 </button>
 {{outlet}}

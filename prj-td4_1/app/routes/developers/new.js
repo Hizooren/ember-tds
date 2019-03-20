@@ -9,7 +9,12 @@ export default Route.extend({
     save(model){
       let copy=model.copy;
       let dev=this.store.createRecord('developer',Ember.Object.create(copy));
-      dev.save();
+      dev.save().then(()=> {
+        this.transitionTo('developers');
+      });
+    },
+    cancel(){
+        this.transitionTo('developers');
     }
   }
 });

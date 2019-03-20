@@ -1,5 +1,5 @@
 {{#link-to "developers.new" class="ui button"}}
-  Ajouter un contact...
+  Ajouter un développeur...
 {{/link-to}}
 <table class="table">
   <thead class="thead-dark">
@@ -9,14 +9,14 @@
   </tr>
   </thead>
   <tbody>
-  {{#each model as |dev|}}
+  {{#each model.store as |dev|}}
     <tr>
       <td>{{dev.identity}}</td>
       <td class="text-center">
         {{#link-to "developers.edit" dev class="ui icon circular basic button"}}
             <i class="ui edit icon"></i>
         {{/link-to}}
-        <button {{action "delete" dev}} class="ui icon circular button">
+       <button {{action "supp" model dev}} class="ui icon circular button">
           <i class="ui icon remove"></i>
         </button>
       </td>
@@ -24,4 +24,18 @@
   {{/each}}
   </tbody>
 </table>
+
+{{#if model.supp}}
+  <div class="container border border-info rounded">
+    <p>Confirmer la suppression?</p>
+    <button class="ui success button" {{action "delete" model.devTemp model}}>
+      {{fa-icon "check"}}
+      Valider
+    </button>
+    <button class="ui remove button" {{action "cancel" model}} value="Cancel">
+      {{fa-icon "remove"}}
+      Cancel
+    </button>
+  </div>
+{{/if}}
 {{outlet}}
