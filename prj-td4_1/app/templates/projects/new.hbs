@@ -4,8 +4,13 @@
   {{textarea value=model.copy.description placeholder="Description"}}<br>
   {{input value=model.copy.startDate placeholder="startDate"}}<br>
   {{input value=model.copy.dueDate placeholder="dueDate"}}<br>
-  {{input value=model.copy.owner placeholder="Owner"}}<br>
 
+  <select name="dev" class="form-control" onchange={{action "changeDevTemp" value="target.value"}}>
+    <option disabled selected>Owner</option>
+  {{#each model.storeDev as |devDispo|}}
+    <option>{{devDispo.identity}}</option>
+  {{/each}}
+  </select><br>
 
   <button class="ui success button" {{action "save" model}}>
   {{fa-icon "check"}}

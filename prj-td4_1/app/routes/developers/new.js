@@ -8,6 +8,7 @@ export default Route.extend({
   actions:{
     save(model){
       let copy=model.copy;
+      console.log(copy);
       let dev=this.store.createRecord('developer',Ember.Object.create(copy));
       dev.save().then(()=> {
         this.transitionTo('developers');
