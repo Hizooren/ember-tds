@@ -1,6 +1,6 @@
 <h1>Projet {{model.id}}</h1>
 
-{{#link-to "story.new" model.id class="ui button"}}
+{{#link-to "story.new" class="ui button"}}
   Ajouter une story au projet...
 {{/link-to}}
 <table class="table">
@@ -14,7 +14,7 @@
   </tr>
   </thead>
   <tbody>
-  {{#each model.storeStories as |story|}}
+  {{#each model as |story|}}
     <tr>
       <td>{{story.code}}</td>
       <td>{{story.descriptif}}</td>

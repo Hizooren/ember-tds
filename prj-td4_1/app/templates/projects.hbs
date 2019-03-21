@@ -21,7 +21,7 @@
       <td>{{project.dueDate}}</td>
       <td>{{project.owner.identity}}</td>
       <td class="text-center">
-        {{#link-to "projects" class="ui icon circular basic button"}}
+        {{#link-to "projects.edit" project.id class="ui icon circular basic button"}}
           <i class="ui edit icon"></i>
         {{/link-to}}
         <button {{action "supp" model project}} class="ui icon circular button">

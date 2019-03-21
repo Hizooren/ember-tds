@@ -8,7 +8,8 @@ export default Route.extend({
     return {
       store : this.store.findAll('project'),
       supp : false,
-      projTemp : ""
+      projTemp : "",
+      storeStories: this.store.findAll('story')
     }
   },
   actions: {

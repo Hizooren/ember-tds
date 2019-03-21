@@ -4,7 +4,7 @@ import EmberObject,{get,set} from '@ember/object';
 
 export default Route.extend({
 
-  templateName:'developers/new',
+  templateName:'projects/new',
   afterModel(model){
     let copy =EmberObject.create(model.toJSON());
     set(model,'copy',copy);
@@ -14,11 +14,12 @@ export default Route.extend({
     save(model){
       model.setProperties(JSON.parse(JSON.stringify(model.copy)));
       model.save().then(()=> {
-        this.transitionTo('developers');
+        this.transitionTo('projects');
       });
     },
     cancel(){
-      this.transitionTo('developers');
+      this.transitionTo('projects');
     }
   }
+
 });
