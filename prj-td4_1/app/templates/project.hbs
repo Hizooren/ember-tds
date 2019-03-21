@@ -1,0 +1,33 @@
+<h1>Projet {{model.id}}</h1>
+
+{{#link-to "project" class="ui button"}}
+  Ajouter une story au projet...
+{{/link-to}}
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Code</th>
+    <th scope="col">Descriptif</th>
+    <th scope="col">Developer</th>
+    <th scope="col">Projet</th>
+    <th scope="col" class="text-center">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |story|}}
+    <tr>
+      <td>{{story.code}}</td>
+      <td>{{story.descriptif}}</td>
+      <td>{{story.developer.identity}}</td>
+      <td>{{story.project.name}}</td>
+      <td class="text-center">
+        {{#link-to "project"}}
+          <button class="btn btn-info">Modifier...</button>
+        {{/link-to}}
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

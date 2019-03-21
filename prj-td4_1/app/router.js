@@ -14,6 +14,10 @@ Router.map(function() {
   this.route('projects', function() {
     this.route('new');
   });
+  this.route('project',{path:'project/:project_id'});
+
+  this.route('', function() {
+  });
 });
 
 export default Router;
