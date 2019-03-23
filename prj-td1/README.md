@@ -53,9 +53,28 @@ Cette version est la première et pourrait être complétée par diverses améli
 
 Ce projet a été fait par moi-même afin de mettre en avant différentes fonctionnalités d'Ember.
 
-## Connaissances mises en avant
+## Objectifs
 
-* Création d'actions
-* Utilisation des routes
-* Mise en relation entre le modèle et la vue
+* Créer un projet
+* Créer des routes
+* Créer/manipuler les templates
+* Créer des classes et instancier des objets
+* Mettre en oeuvre le Data-binding avec computed properties
+
+* Créer des routes avec model
+* Utiliser/créer des helpers handlebar
+* Mettre en oeuvre le Data-binding
+* Utiliser les tableaux
+
+## Fonctionnalités
+
+* Saisir une note (message textuel) et afficher le nombre de caractères restants (le message est limité à 100 caractères saisis)
+* Enregistrer (pseudo enregistrement)
+* Effacer le contenu
+* Afficher les messages d'info (sauvegarde, modification…)
+* Gérer les changements de classe CSS sur l'affichage d'info
+
+* Sélectionner/désélectionner des services
+* Calculer le montant dû
+* Afficher le nombre de services sélectionnés
 

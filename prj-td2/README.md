@@ -53,9 +53,19 @@ Cette version est la première et pourrait être complétée par diverses améli
 
 Ce projet a été fait par moi-même afin de mettre en avant différentes fonctionnalités d'Ember plus délicates.
 
-## Connaissances mises en avant
+## Objectifs
 
-* Utilisation d'helpers eet création d'helpers
-* Mise en place du composant multi-select
-* Transition entre les différentes pages
+* Création de Computed properties
+* Manipulation de Tableaux d'objets
+* Création de helper et de component
+
+## Fonctionnalités
+
+* Lister les produits disponibles
+* Ajouter un ou plusieurs produits disponibles aux produits sélectionnés
+* Ajouter tous les produits disponibles aux produits sélectionnés
+* Retirer un ou plusieurs produits sélectionnés
+* Retirer tous les produits sélectionnés
+* Valider le choix de produits sélectionnés
+* Revenir au choix des produits
 
