@@ -1,57 +1,61 @@
-# prj-td2
+# Application Liste de Produits
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ce projet a pour objectif de développer une application permettant à l'aide d'une liste de sélectionner ses produits.
+## Bien commencer
 
-## Prerequisites
+Ces instructions servent à indiquer les instructions afin de pouvoir lançer le projet.
+### Prérequis
 
-You will need the following things properly installed on your computer.
+Avant de cloner le projet, il faudra installer Ember : 
+```
+ npm install -g ember-cli
+```
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+Puis il faudra se rendre dans le répertoire d'ember, récupérer le chemin et faire :
 
-## Installation
+```
+set PATH=%PATH%;cheminEmber
+```
 
-* `git clone <repository-url>` this repository
-* `cd prj-td2`
-* `npm install`
+### Installation
 
-## Running / Development
+Il ne reste plus qu'à cloner le projet, puis se rendre dans le répertoire du projet et faire :
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+```
+ npm install
+```
 
-### Code Generators
+## Lancement du projet
 
-Make use of the many generators for code, try `ember help generate` for more details
+On peut désormais se rendre dans le répertoire du projet et faire la commande : 
 
-### Running Tests
+```
+ember serve
+```
 
-* `ember test`
-* `ember test --server`
+Le projet est désormais accessible à l'adresse : 
 
-### Linting
+```
+127.0.0.1:4200
+```
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+## Contributeurs
 
-### Building
+Ce projet s'est fait à l'aide de Jean-Christophe HERON.
+Lien de son Github : 
+https://github.com/jcheron
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+## Version
 
-### Deploying
+Cette version est la première et pourrait être complétée par diverses améliorations notamment avec des boîtes de confirmation.
 
-Specify what it takes to deploy your app.
+## Auteur
 
-## Further Reading / Useful Links
+Ce projet a été fait par moi-même afin de mettre en avant différentes fonctionnalités d'Ember plus délicates.
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## Connaissances mises en avant
+
+* Utilisation d'helpers eet création d'helpers
+* Mise en place du composant multi-select
+* Transition entre les différentes pages
+
