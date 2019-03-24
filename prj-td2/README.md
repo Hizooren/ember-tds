@@ -39,7 +39,7 @@ Le projet est désormais accessible à l'adresse :
 127.0.0.1:4200
 ```
 
-## Contributeurs
+## Collaborateurs
 
 Ce projet s'est fait à l'aide de Jean-Christophe HERON.
 Lien de son Github : 
