@@ -1,0 +1,9 @@
+<hr>
+<h1 class="ui header"><i class="calendar alternate icon"></i>Dashboard</h1>
+<h5>Progress of the project stories</h5>
+
+{{#ui-table
+  elements=model.steps
+  etat=model.etat
+  emptyMessage="No steps to display"}}
+{{/ui-table}}

@@ -1,52 +1,10 @@
+<h2 class="ui header">Projets</h2>
 {{#link-to "projects.new" class="ui button"}}
+  <i class="ui plus icon"></i>
   Ajouter un projet...
 {{/link-to}}
-<table class="table">
-  <thead class="thead-dark">
-  <tr>
-    <th scope="col">Name</th>
-    <th scope="col">Descriptif</th>
-    <th scope="col">StartDate</th>
-    <th scope="col">DueDate</th>
-    <th scope="col">Owner</th>
-    <th scope="col" class="text-center">Actions</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each model.store as |project|}}
-    <tr>
-      <td>{{project.name}}</td>
-      <td>{{project.description}}</td>
-      <td>{{project.startDate}}</td>
-      <td>{{project.dueDate}}</td>
-      <td>{{project.owner.identity}}</td>
-      <td class="text-center">
-        {{#link-to "projects.edit" project.id class="ui icon circular basic button"}}
-          <i class="ui edit icon"></i>
-        {{/link-to}}
-        <button {{action "supp" model project}} class="ui icon circular button">
-          <i class="ui icon remove"></i>
-        </button>
-        {{#link-to "project" project.id}}
-          <button class="btn btn-info">Voir les stories</button>
-        {{/link-to}}
-      </td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+  <div class="ui divider"></div>
+{{#ui-table elements=model.projects fields=model.fields operations=model.operations}}{{/ui-table}}
 
-{{#if model.supp}}
-  <div class="container border border-info rounded">
-    <p>Confirmer la suppression?</p>
-    <button class="ui success button" {{action "delete" model.projTemp model}}>
-      {{fa-icon "check"}}
-      Valider
-    </button>
-    <button class="ui remove button" {{action "cancel" model}} value="Cancel">
-      {{fa-icon "remove"}}
-      Cancel
-    </button>
-  </div>
-{{/if}}
 {{outlet}}
+

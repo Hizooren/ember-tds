@@ -14,6 +14,21 @@ var Adapater=DS.RESTAdapter.extend({
   urlForDeleteRecord(id, modelName) {
     modelName=pluralize(modelName);
     return this.get('host')+'/'+this.get('namespace')+`/${modelName}/*?filter={_id:'${id}'}`;
+  },
+  shouldReloadRecord: function(store, snapshot) {
+    return true;
+  },
+
+  shouldReloadAll: function(store, snapshot) {
+    return true;
+  },
+
+  shouldBackgroundReloadRecord: function(store, snapshot) {
+    return true;
+  },
+
+  shouldBackgroundReloadAll: function(store, snapshot) {
+    return true;
   }
 });
 

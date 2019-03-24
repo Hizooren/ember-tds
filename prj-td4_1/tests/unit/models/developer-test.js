@@ -1,13 +1,12 @@
-import { module, test } from 'qunit';
-import { setupTest } from 'ember-qunit';
+import { moduleForModel, test } from 'ember-qunit';
 
-module('Unit | Model | developer', function(hooks) {
-  setupTest(hooks);
+moduleForModel('developer', 'Unit | Model | developer', {
+  // Specify the other units that are required for this test.
+  needs: []
+});
 
-  // Replace this with your real tests.
-  test('it exists', function(assert) {
-    let store = this.owner.lookup('service:store');
-    let model = store.createRecord('developer', {});
-    assert.ok(model);
-  });
+test('it exists', function(assert) {
+  let model = this.subject();
+  // let store = this.store();
+  assert.ok(!!model);
 });

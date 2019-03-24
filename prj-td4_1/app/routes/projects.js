@@ -1,30 +1,13 @@
 import Route from '@ember/routing/route';
-import EmberObject,{get,set} from '@ember/object';
+import RSVP from 'rsvp';
 
 
 export default Route.extend({
-
-  model() {
-    return {
-      store : this.store.findAll('project'),
-      supp : false,
-      projTemp : "",
-      storeStories: this.store.findAll('story')
-    }
-  },
-  actions: {
-    delete(proj, model) {
-      if (model.supp) {
-        proj.destroyRecord();
-        set(model, 'supp', false);
-      }
-    },
-    supp(model, proj) {
-      set(model, 'supp', true);
-      set(model, 'projTemp', proj);
-    },
-    cancel(model) {
-      set(model, 'supp', false);
-    }
+  model(){
+    return RSVP.hash({
+      projects:this.get('store').findAll('project'),
+      fields:['Name','Description',{name:'sDate',caption:'Start Date'},{name:'dDate',caption:'Due Date'},{name:'owner.identity',caption:'Owner'}],
+      operations:[{icon:'remove red',link:'projects.delete'},{icon:'edit',link:'projects.edit'},{icon:'calendar alternate',link:'project'}]
+    });
   }
 });

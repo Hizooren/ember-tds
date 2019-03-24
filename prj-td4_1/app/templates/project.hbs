@@ -1,33 +1,44 @@
-<h1>Projet {{model.id}}</h1>
-
+<h2 class="ui header">
+  <i class="folder open"></i>
+  <div class="content">
+    {{model.name}}
+    <div class="sub header">{{model.descriptif}}</div>
+  </div>
+</h2>
+<h3 class="ui header">Stories</h3>
 {{#link-to "story.new" model.id class="ui button"}}
-  Ajouter une story au projet...
+  <i class="ui plus icon"></i>
+Ajouter une story au projet...
 {{/link-to}}
-<table class="table">
-  <thead class="thead-dark">
-  <tr>
-    <th scope="col">Code</th>
-    <th scope="col">Descriptif</th>
-    <th scope="col">Developer</th>
-    <th scope="col">Projet</th>
-    <th scope="col" class="text-center">Actions</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each model.storeStories as |story|}}
-    <tr>
-      <td>{{story.code}}</td>
-      <td>{{story.descriptif}}</td>
-      <td>{{story.developer.identity}}</td>
-      <td>{{story.project.name}}</td>
-      <td class="text-center">
-        {{#link-to "project"}}
-          <button class="btn btn-info">Modifier...</button>
-        {{/link-to}}
-      </td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
 
+{{#link-to "projects" class="ui button"}}<i class="caret square left"></i>Retour à la page des projets{{/link-to}}
+<div class="ui divider"></div>
+<div class="ui middle aligned divided list">
+  {{#each model.stories as |story|}}
+  <div class="item">
+    <div class="right floated content">
+      <div class="ui left labeled button" tabindex="0">
+        <a class="ui basic right label">
+          {{story.developer.identity}}
+        </a>
+        <div class="ui button">
+          <i class="user "></i> Modifier...
+        </div>
+      </div>
+    </div>
+    <i class="big file middle aligned"></i>
+    <div class="content">
+      <div class="header">
+        {{story.code}}
+      </div>
+      <div class="description">
+        {{story.description}}
+        {{#each story.tags as |tag|}}
+          <a class="ui {{tag.color}} label">{{tag.title}}</a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+ {{/each}}
+</div>
 {{outlet}}

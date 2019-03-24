@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
-import EmberObject,{get,set} from '@ember/object';
-
+import RSVP from 'rsvp';
+import Ember from 'ember';
+import EmberObject from '@ember/object';
 
 export default Route.extend({
-
-  templateName:'projects/frm',
+  templateName: 'projects/frm',
   model(params){
     return RSVP.hash({
       oldProject: this.get('store').findRecord('project',params.project_id),
@@ -32,8 +32,7 @@ export default Route.extend({
         ()=>{this.transitionTo("projects");});
     },
     cancel(){
-      this.transitionTo('projects');
+      this.transitionTo("projects");
     }
   }
-
 });

@@ -1,11 +1,10 @@
-
-{{input value=model.copy.identity placeholder="Identity"}}
-<button class="ui success button" {{action "save" model}}>
-    {{fa-icon "check"}}
-  Valider
-</button>
-<button class="ui remove button" {{action "cancel" model}} value="Cancel">
-  {{fa-icon "remove"}}
-  Cancel
-</button>
+<div>
+  {{#ui-form newValue=model  validation="save" cancel="cancel"}}
+    <div class="field">
+      <div id="div-frmEdit-identity" class="ui input">
+        {{input id="frmEdit-identity" value=model.identity placeholder="Identity"}}
+      </div>
+    </div>
+  {{/ui-form}}
+</div>
 {{outlet}}
