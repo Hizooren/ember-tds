@@ -1,12 +1,13 @@
 import Route from '@ember/routing/route';
+import EmberObject from '@ember/object';
 import RSVP from 'rsvp';
 
 export default Route.extend({
-  model(params){
+  model(){
     return RSVP.hash({
-      fields:['etat'],
       steps:this.get('store').findAll('step'),
-      operations:[{icon:'remove red',link:'projects.delete'},{icon:'edit',link:'projects.edit'}]
+      fields:['etat'],
+      operations:[{icon:'red remove',link:'steps.delete'},{icon:'edit',link:'steps.update'}]
     });
   }
 });

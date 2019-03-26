@@ -10,7 +10,9 @@
   <i class="ui plus icon"></i>
 Ajouter une story au projet...
 {{/link-to}}
-
+{{#link-to "project.board" class="ui teal button"}}<i class="calendar alternate icon"></i>
+Dashboard
+{{/link-to}}
 {{#link-to "projects" class="ui button"}}<i class="caret square left"></i>Retour à la page des projets{{/link-to}}
 <div class="ui divider"></div>
 <div class="ui middle aligned divided list">
@@ -22,7 +24,7 @@ Ajouter une story au projet...
           {{story.developer.identity}}
         </a>
         <div class="ui button">
-          <i class="user "></i> Modifier...
+         {{#link-to "stories.edit" story.id}}<i class="user "></i> Modifier...{{/link-to}}
         </div>
       </div>
     </div>

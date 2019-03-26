@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+
   this.route('projects', function() {
     this.route('new');
     this.route('delete',{ path: 'delete/:project_id' });
@@ -30,10 +31,18 @@ Router.map(function() {
     this.route('edit',{ path: 'update/:tag_id' });
   });
 
+  this.route('steps', function() {
+    this.route('new');
+    this.route('delete',{ path: 'delete/:step_id' });
+    this.route('update',{ path: 'update/:step_id' });
+  });
+
   this.route('stories', function() {
     this.route('new');
     this.route('edit', {path:'edit/:story_id'});
   });
+  this.route('home');
 });
+
 
 export default Router;

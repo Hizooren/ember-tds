@@ -19,11 +19,11 @@ export default Route.extend({
       Ember.set(story,'project',data.project);
       Ember.set(story,'tags',data.tags);
       story.save().then(()=>{
-        this.transitionTo("stories");
+        this.transitionTo("projects");
       })
     },
     cancel(){
-      this.transitionTo("stories");
+      this.transitionTo("projects");
     }
   }
 });
