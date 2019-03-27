@@ -32,7 +32,7 @@ De plus il faudra installer les modules manquants dans le répertoire du projet:
 
 ### MongoDB
 MongoDB est un système de gestion de base de données. Il permet de créer des collections d'objet et de les gérer.
-Installer MongoDB sous Windows :
+#### Installer MongoDB sous Windows :
 
 1. Creer le fichier : launcher.bat
 
