@@ -1,51 +1,86 @@
-# boards-app
+== Projet : Boards
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Board est une application qui permet la gestion de développeurs, de projets et des stories au sein d'un projet.
 
-## Prerequisites
+Récupération du projet
+git clone https://github.com/Hizooren/ember-tds.git
 
-You will need the following things properly installed on your computer.
+Ember
+Ember est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
+(modèle-vue-contrôleur). Il permet aux développeurs de créer une application web monopage, soit 
+une application qui ne nécessite pas de rafraichissement de la page. 
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+Installation
 
-## Installation
+```npm install -g ember-cli```
 
-* `git clone <repository-url>` this repository
-* `cd boards-app`
-* `npm install`
+Il faut également install Bower car le projet utilise un composant appelé semantic-ui-calendar : 
 
-## Running / Development
+```npm install -g bower```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+De plus il faudra installer les modules manquants dans le répertoire du projet:
 
-### Code Generators
+```npm install```
+```bower install```
 
-Make use of the many generators for code, try `ember help generate` for more details
+MogoDB
+MongoDB est un système de gestion de base de données. Il permet de créer des collections d'objet et de les gérer.
+###Installer MongoDB sous Windows :
 
-### Running Tests
+1. Creer le fichier : launcher.bat
 
-* `ember test`
-* `ember test --server`
+```@echo off
+cd "C:\Program Files\MongoDB\Server\4.0\bin"
+start mongod
+ping 127.0.0.1 -n 10 > nul
+start mongo
 
-### Building
+cd "C:\restheart"
+start java -jar -Dfile.Encoding=UTF-8 restheart.jar
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+exit
+```
 
-### Deploying
+2. Télécharger restheart.jar 
 
-Specify what it takes to deploy your app.
+https://github.com/SoftInstigate/restheart/releases
 
-## Further Reading / Useful Links
+Note: Mettre le fichier au chemin indiqué dans le fichier launcher : "C:\restheart"
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+3. Télécharger et installer MongoDB
+
+https://www.mongodb.com/download-center#community
+
+4. executer launcher.bat
+
+Créer une base de donnnées (ici boards):
+
+```use boards```
+
+Créer les collections utiles :
+
+```
+bd.createCollection('developers', {})
+	bd.createCollection('stories', {})
+	bd.createCollection('projects', {})
+	bd.createCollection('tags', {})
+	bd.createCollection('steps', {})
+	bd.createCollection('tasks', {})
+ ```
+ 
+Installer Semantic-UI
+
+```ember install semantic-ui-ember```
+
+Lancer le serveur ember
+
+```ember serve```
+
+Se rendre sur la page https://127.0.0.1:4200
+
+Utilisation de l'application
+
+Créer, modifier et supprimer des développeurs.
+Créer, modifier, supprimer des projets reliés à un développeur.
+Créer, modifier, supprimer des stories reliées à un projet.
+Créer des tags afin liés à des stories.
