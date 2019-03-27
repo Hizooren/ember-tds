@@ -1,4 +1,4 @@
-== Projet : Boards
+# Application de gestion de projets : Boards
 
 Board est une application qui permet la gestion de développeurs, de projets et des stories au sein d'un projet.
 
@@ -84,3 +84,17 @@ Créer, modifier et supprimer des développeurs.
 Créer, modifier, supprimer des projets reliés à un développeur.
 Créer, modifier, supprimer des stories reliées à un projet.
 Créer des tags afin liés à des stories.
+
+## Collaborateurs
+
+Ce projet s'est fait à l'aide de Jean-Christophe HERON.
+Lien de son Github : 
+https://github.com/jcheron
+
+## Version
+
+Cette version est la première et pourrait être complétée par diverses améliorations.
+
+## Auteur
+
+Ce projet a été fait par moi-même afin de mettre en avant différentes fonctionnalités d'Ember en lien avec le modèle.
