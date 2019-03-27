@@ -27,6 +27,7 @@ Il faut également install Bower car le projet utilise un composant appelé sema
 De plus il faudra installer les modules manquants dans le répertoire du projet:
 
 ```npm install```
+
 ```bower install```
 
 
