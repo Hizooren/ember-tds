@@ -79,15 +79,15 @@ bd.createCollection('developers', {})
 
 ```ember install semantic-ui-ember```
 
-Lancer le serveur ember
+Lancer le serveur ember dans le répertoire du projet : 
 
 ```ember serve```
 
-Se rendre sur la page 
+Se rendre sur la page :
 
 ```127.0.0.1:4200```
 
-Utilisation de l'application
+## Utilisation de l'application
 
 * Créer, modifier et supprimer des développeurs.
 * Créer, modifier, supprimer des projets reliés à un développeur.
