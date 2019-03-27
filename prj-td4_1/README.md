@@ -1,31 +1,38 @@
 # Application de gestion de projets : Boards
 
+
 Board est une application qui permet la gestion de développeurs, de projets et des stories au sein d'un projet.
+
 
 Récupération du projet
 git clone https://github.com/Hizooren/ember-tds.git
+
 
 Ember
 Ember est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
 (modèle-vue-contrôleur). Il permet aux développeurs de créer une application web monopage, soit 
 une application qui ne nécessite pas de rafraichissement de la page. 
 
-Installation
+
+## Installation
 
 ```npm install -g ember-cli```
+
 
 Il faut également install Bower car le projet utilise un composant appelé semantic-ui-calendar : 
 
 ```npm install -g bower```
+
 
 De plus il faudra installer les modules manquants dans le répertoire du projet:
 
 ```npm install```
 ```bower install```
 
-MogoDB
+
+### MongoDB
 MongoDB est un système de gestion de base de données. Il permet de créer des collections d'objet et de les gérer.
-###Installer MongoDB sous Windows :
+Installer MongoDB sous Windows :
 
 1. Creer le fichier : launcher.bat
 
@@ -51,13 +58,13 @@ Note: Mettre le fichier au chemin indiqué dans le fichier launcher : "C:\resthe
 
 https://www.mongodb.com/download-center#community
 
-4. executer launcher.bat
+4. Executer launcher.bat
 
-Créer une base de donnnées (ici boards):
+#### Créer une base de donnnées (ici boards):
 
 ```use boards```
 
-Créer les collections utiles :
+#### Créer les collections utiles :
 
 ```
 bd.createCollection('developers', {})
@@ -68,7 +75,7 @@ bd.createCollection('developers', {})
 	bd.createCollection('tasks', {})
  ```
  
-Installer Semantic-UI
+### Installer Semantic-UI
 
 ```ember install semantic-ui-ember```
 
@@ -76,14 +83,16 @@ Lancer le serveur ember
 
 ```ember serve```
 
-Se rendre sur la page https://127.0.0.1:4200
+Se rendre sur la page 
+
+```127.0.0.1:4200```
 
 Utilisation de l'application
 
-Créer, modifier et supprimer des développeurs.
-Créer, modifier, supprimer des projets reliés à un développeur.
-Créer, modifier, supprimer des stories reliées à un projet.
-Créer des tags afin liés à des stories.
+* Créer, modifier et supprimer des développeurs.
+* Créer, modifier, supprimer des projets reliés à un développeur.
+* Créer, modifier, supprimer des stories reliées à un projet.
+* Créer des tags afin liés à des stories.
 
 ## Collaborateurs
 
