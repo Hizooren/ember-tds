@@ -18,12 +18,13 @@ Il faut installer NodeJS afin d'utiliser la commande 'npm' :
 https://nodejs.org/en/
 
 EmberJS
-EmberJS est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
-(modèle-vue-contrôleur). Il permet aux développeurs de créer une application web monopage, soit 
-une application qui ne nécessite pas de rafraichissement de la page. 
+
+EmberJS est un framework open-source JavaScript qui s'appuie sur une architecture de type MRC
+(Model-Route-Component) mais aussi MVC. Il permet aux développeurs de créer des vues sous forme
+de "Simple Landing Page".
 
 
-## Installation
+## Installation d'EmberJS
 
 ```npm install -g ember-cli```
 
