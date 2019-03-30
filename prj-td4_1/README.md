@@ -9,8 +9,16 @@ Récupération du projet
 ```git clone https://github.com/Hizooren/ember-tds.git```
 
 
-Ember
-Ember est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
+NodeJS
+
+Il faut installer NodeJS afin d'utiliser la commande 'npm' :
+
+## Téléchargement
+
+https://nodejs.org/en/
+
+EmberJS
+EmberJS est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
 (modèle-vue-contrôleur). Il permet aux développeurs de créer une application web monopage, soit 
 une application qui ne nécessite pas de rafraichissement de la page. 
 
