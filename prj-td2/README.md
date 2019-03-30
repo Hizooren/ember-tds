@@ -3,6 +3,19 @@
 Ce projet a pour objectif de développer une application permettant à l'aide d'une liste de sélectionner ses produits.
 ## Bien commencer
 
+Récupération du projet
+
+```git clone https://github.com/Hizooren/ember-tds.git```
+
+
+NodeJS
+
+Il faut installer NodeJS afin d'utiliser la commande 'npm' :
+
+### Téléchargement de NodeJS
+
+https://nodejs.org/en/
+
 Ces instructions servent à indiquer les instructions afin de pouvoir lançer le projet.
 ### Prérequis
 
