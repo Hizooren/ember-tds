@@ -9,8 +9,16 @@ Récupération du projet
 ```git clone https://github.com/Hizooren/ember-tds.git```
 
 
-Ember
-Ember est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
+NodeJS
+
+Il faut installer NodeJS afin d'utiliser la commande 'npm' :
+
+### Téléchargement de NodeJS
+
+https://nodejs.org/en/
+
+EmberJS
+EmberJS est un framework open-source JavaScript qui s'appuie sur une architecture de type MVC
 (modèle-vue-contrôleur). Il permet aux développeurs de créer une application web monopage, soit 
 une application qui ne nécessite pas de rafraichissement de la page. 
 
@@ -66,16 +74,26 @@ https://www.mongodb.com/download-center#community
 
 ```use boards```
 
+#### Importer des données préfaites :
+
+IMPORTANT : A FAIRE DANS UN TERMINAL ET PAS DANS LE SHELL MONGODB
+
+```cd "C:\Program Files\MongoDB\Server\4.0\bin"```
+
+```mongoimport --db boards --collection developers --file RepertoireDuProjet\ember-tds\prj-td4_1\db\developers.json```
+
+```mongoimport --db boards --collection projects --file RepertoireDuProjet\ember-tds\prj-td4_1\db\projects.json```
+
 #### Créer les collections utiles :
 
-```
-bd.createCollection('developers', {})
-	bd.createCollection('stories', {})
-	bd.createCollection('projects', {})
-	bd.createCollection('tags', {})
-	bd.createCollection('steps', {})
-	bd.createCollection('tasks', {})
- ```
+IMPORTANT : A FAIRE DANS LE SHELL MONGODB ET PAS DANS UN TERMINAL
+
+```db.createCollection("stories")```
+
+```db.createCollection("tags")```
+
+```db.createCollection("steps")```
+ 
  
 ### Installer Semantic-UI
 
