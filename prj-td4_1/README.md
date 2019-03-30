@@ -88,11 +88,12 @@ IMPORTANT : A FAIRE DANS UN TERMINAL ET PAS DANS LE SHELL MONGODB
 
 IMPORTANT : A FAIRE DANS LE SHELL MONGODB ET PAS DANS UN TERMINAL
 
-```
-db.createCollection(bd.createCollection('stories', {})
-	db.createCollection('tags', {})
-	db.createCollection('steps', {})
- ```
+```db.createCollection("stories")```
+
+```db.createCollection("tags")```
+
+```db.createCollection("steps")```
+ 
  
 ### Installer Semantic-UI
 
