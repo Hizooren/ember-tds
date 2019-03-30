@@ -13,7 +13,7 @@ NodeJS
 
 Il faut installer NodeJS afin d'utiliser la commande 'npm' :
 
-## Téléchargement
+### Téléchargement de NodeJS
 
 https://nodejs.org/en/
 
