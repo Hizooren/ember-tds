@@ -74,15 +74,24 @@ https://www.mongodb.com/download-center#community
 
 ```use boards```
 
+#### Importer des données préfaites :
+
+IMPORTANT : A FAIRE DANS UN TERMINAL ET PAS DANS LE SHELL MONGODB
+
+```cd "C:\Program Files\MongoDB\Server\4.0\bin"```
+
+```mongoimport --db boards --collection developers --file RepertoireDuProjet\ember-tds\prj-td4_1\db\developers.json```
+
+```mongoimport --db boards --collection projects --file RepertoireDuProjet\ember-tds\prj-td4_1\db\projects.json```
+
 #### Créer les collections utiles :
 
+IMPORTANT : A FAIRE DANS LE SHELL MONGODB ET PAS DANS UN TERMINAL
+
 ```
-bd.createCollection('developers', {})
-	bd.createCollection('stories', {})
-	bd.createCollection('projects', {})
-	bd.createCollection('tags', {})
-	bd.createCollection('steps', {})
-	bd.createCollection('tasks', {})
+db.createCollection(bd.createCollection('stories', {})
+	db.createCollection('tags', {})
+	db.createCollection('steps', {})
  ```
  
 ### Installer Semantic-UI
