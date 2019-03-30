@@ -1,7 +1,22 @@
 # Application Gestion de contacts
 
 Ce projet a pour objectif de développer une application qui permet de gérer différents contacts.
+
 ## Bien commencer
+
+Récupération du projet
+
+```git clone https://github.com/Hizooren/ember-tds.git```
+
+
+NodeJS
+
+Il faut installer NodeJS afin d'utiliser la commande 'npm' :
+
+### Téléchargement de NodeJS
+
+https://nodejs.org/en/
+
 
 Ces instructions servent à indiquer les instructions afin de pouvoir lançer le projet.
 ### Prérequis
