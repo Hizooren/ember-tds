@@ -5,7 +5,7 @@ Ce projet a pour objectif de développer une application Note et une application
 
 Récupération du projet
 
-```git clone https://github.com/Hizooren/ember-tds.git```
+```https://github.com/Guillaume-Lafosse/ember-tds.git```
 
 
 NodeJS
