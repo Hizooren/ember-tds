@@ -6,7 +6,7 @@ Board est une application qui permet la gestion de développeurs, de projets et 
 
 Récupération du projet
 
-```git clone https://github.com/Hizooren/ember-tds.git```
+```git clone https://github.com/Guillaume-Lafosse/ember-tds.git```
 
 
 NodeJS
